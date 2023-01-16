@@ -1,0 +1,35 @@
+mod token_gitignore; //delete this
+mod ping;
+//mod sheets;
+mod telegramus;
+use crate::ping::ping;
+use std::{thread, time};
+use std::future::Future;
+
+
+/*fn fill() -> impl Future<Output = ()>{
+    sheets::fill;
+}*/
+
+fn main(){
+    let mut id = "";
+    let mut text = "TEST";
+    let mut token = "";
+    let mut ip = "";
+    let mut status = "";
+    let mut last_status= "";
+    token_gitignore::change(&mut token); // delete this
+    token_gitignore::change2(&mut id); // delete this
+    token_gitignore::change3(&mut ip); // delete this
+    if last_status == "off"{
+        text =
+    }
+    let mut url = format!(r"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}\&parse_mode=HTML&text={text}");
+    telegramus::send(&mut url);
+    //println!("{}", url);
+
+    loop{
+        ping(&mut ip, &mut status, &mut last_status, &mut url);
+        thread::sleep(time::Duration::from_secs(60));
+    }
+}

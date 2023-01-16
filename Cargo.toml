@@ -1,0 +1,15 @@
+[package]
+name = "telegram1"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+winping = "0.10.1"
+google-sheets4 = "*"
+serde = "^1.0"
+serde_json = "^1.0"
+curl = "0.4.44"
+hyper = { version = "1.0.0-rc.2", features = ["full"] }
+hyper-rustls = "0.23.2"
