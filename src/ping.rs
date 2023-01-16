@@ -1,8 +1,8 @@
 use std::net::IpAddr;
 use winping::{Buffer, Pinger};
-mod telegramus;
+use crate::telegramus::send;
 
-pub fn ping(val: &mut &str, val2: &mut &str, val3: &mut &str, val4: &mut String) {
+pub fn ping(val: &mut &str, val2: &mut &str, val3: &mut &str, val5: &mut String, val6: &mut String) {
     let dst = std::env::args()
         .nth(1)
         .unwrap_or(String::from("162.55.27.218"))
@@ -19,7 +19,7 @@ pub fn ping(val: &mut &str, val2: &mut &str, val3: &mut &str, val4: &mut String)
                 } else if val2 != val3 {
                     *val2 = ("on");
                     println!("Light is on!");
-                    telegramus
+                    send(&mut val5);
 
                 }
                 *val3 = "on";
@@ -29,6 +29,7 @@ pub fn ping(val: &mut &str, val2: &mut &str, val3: &mut &str, val4: &mut String)
                 } else if val2 != val3 {
                     *val2 = ("off");
                     println!("Light is off!");
+                    send(&mut val6);
                 }
                 *val3 = ("off");
             }
