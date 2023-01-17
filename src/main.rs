@@ -1,5 +1,5 @@
 mod token_gitignore; //delete this
-//mod ping;
+mod ping;
 //mod sheets;
 mod telegramus;
 //use crate::ping::ping;
@@ -27,9 +27,9 @@ fn main(){
     println!("{}", url_on);
     telegramus::send(&mut url_on);
 
-    /*loop{
-        ping(&mut ip, &mut status, &mut last_status, &url_on, &url_off);
+    loop{
+        ping(&mut ip, &mut status, &mut last_status, &mut url_on, &mut url_off);
         thread::sleep(time::Duration::from_secs(60));
-    }*/
+    }
 }
 
