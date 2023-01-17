@@ -4,6 +4,7 @@
 mod telegramus;
 //use crate::ping::ping;
 use std::{thread, time};
+use urlencoding::encode;
 use std::future::Future;
 
 /*fn fill() -> impl Future<Output = ()>{
@@ -12,8 +13,8 @@ use std::future::Future;
 
 fn main(){
     let mut id = "";
-    let text_on = "Light_is_on";
-    let text_off = "light_is_off";
+    let text_on = encode("Light is on");
+    let text_off = encode("Light is off");
     let mut token = "";
     let mut ip = "";
     let mut status = "";
