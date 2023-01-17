@@ -1,5 +1,6 @@
 use std::net::IpAddr;
-use winping::{Buffer, Pinger};
+use winping::Buffer;
+use winping::Pinger;
 use crate::telegramus::send;
 
 pub fn ping(val: &mut &str, val2: &mut &str, val3: &mut &str, val5: &mut String, val6: &mut String) {
