@@ -2,7 +2,7 @@ mod token_gitignore; //delete this
 mod ping;
 //mod sheets;
 mod telegramus;
-//use crate::ping::ping;
+use crate::ping::ping;
 use std::{thread, time};
 use urlencoding::encode;
 use std::future::Future;
