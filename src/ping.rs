@@ -2,7 +2,7 @@ use std::net::IpAddr;
 use winping::{Buffer, Pinger};
 use crate::telegramus::send;
 
-pub fn ping(val: &mut &str, val2: &mut &str, val3: &mut &str, val5: &mut &str, val6: &mut &str) {
+pub fn ping(val: &mut &str, val2: &mut &str, val3: &mut &str, val5: &mut String, val6: &mut String) {
     let dst = std::env::args()
         .nth(1)
         .unwrap_or(String::from("162.55.27.218"))
