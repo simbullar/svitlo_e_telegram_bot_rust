@@ -1,4 +1,4 @@
-mod token_gitignore; //delete this
+//mod token_gitignore; //delete this
 //mod ping;
 //mod sheets;
 mod telegramus;
@@ -18,9 +18,9 @@ fn main(){
     let mut ip = "";
     let mut status = "";
     let mut last_status= "";
-    token_gitignore::change(&mut token); // delete this
-    token_gitignore::change2(&mut id); // delete this
-    token_gitignore::change3(&mut ip); // delete this
+    //token_gitignore::change(&mut token); // delete this
+    //token_gitignore::change2(&mut id); // delete this
+    //token_gitignore::change3(&mut ip); // delete this
     let mut url_on = format!(r"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}\&parse_mode=HTML&text={text_on}");
     let mut url_off = format!(r"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}\&parse_mode=HTML&text={text_off}");
     println!("{}", url_on);
